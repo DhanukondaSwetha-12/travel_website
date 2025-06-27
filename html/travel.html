@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    
+    <section id="email-section">
+      <h2>Welcome to Travel Explorer</h2>
+      <input type="text" id="username" placeholder="Enter your name" />
+      <input type="email" id="email" placeholder="Enter your email" />
+      <button onclick="startJourney()">Next</button>
+    </section>
+
+    
+    <section id="search-section" style="display:none;">
+      <h2>Select a Travel Destination</h2>
+      <select id="placeDropdown" onchange="showSelectedPlace()"></select>
+    </section>
+
+    
+    <section id="gallery-section" style="display:none;">
+      <h2>Selected Place</h2>
+      <div id="image-grid"></div>
+      <button onclick="confirmSelection()">Confirm Selection</button>
+    </section>
+
+    
+    <section id="confirmation-section" style="display:none;">
+      <h2>Travel Summary</h2>
+      <p><strong>Name:</strong> <span id="confirm-name"></span></p>
+      <p><strong>Email:</strong> <span id="confirm-email"></span></p>
+      <h3>Places Selected:</h3>
+      <ul id="selected-places"></ul>
+    </section>
+  </div>
+
+  
+  <div id="modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close-btn">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-info"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
